@@ -1,0 +1,52 @@
+# Lufträume für Flulino automatisch aktualisieren
+# Holt jeden Donnerstag (AIRAC-Tag) die aktuellen Daten von open flightmaps,
+# wandelt sie um und legt sie als data/airspaces-de.json auf flulino.de.
+# Manuell starten: Reiter „Actions“ → „Lufträume aktualisieren“ → „Run workflow“.
+name: Lufträume aktualisieren
+
+on:
+  schedule:
+    - cron: '17 5 * * 4'   # jeden Donnerstag 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: airspaces
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Lufträume laden und umwandeln
+        run: python scripts/build_airspaces.py
+
+      - name: Speichern, falls sich etwas geändert hat
+        id: commit
+        run: |
+          git config user.name "Flulino Bot"
+          git config user.email "flulino@icloud.com"
+          git add data/airspaces-de.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderung."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Lufträume aktualisiert"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Webseite neu veröffentlichen
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
