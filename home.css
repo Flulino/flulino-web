@@ -78,7 +78,9 @@ html { scroll-behavior: smooth; }
 .tab.on { color: #64B5FF; background: rgba(100,181,255,.14); }
 
 /* E6B-Rose, die sich beim Scrollen dreht */
-.wheel { position: absolute; border-radius: 50%; background-repeat: no-repeat; will-change: transform; }
+.wheel { position: absolute; border-radius: 50%; background-repeat: no-repeat; will-change: transform;
+  -webkit-mask-image: radial-gradient(circle at center, transparent 112px, #000 113px, #000 158px, transparent 159px);
+  mask-image: radial-gradient(circle at center, transparent 112px, #000 113px, #000 158px, transparent 159px); }
 
 .dots { position: absolute; right: max(18px, calc((100vw - 1180px) / 2)); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 10px; z-index: 5; }
 .dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(154,175,197,.3); transition: all .3s; }

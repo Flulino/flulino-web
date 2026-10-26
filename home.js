@@ -10,7 +10,7 @@
     { k: 'mb',      scroll: 565, zoom: { x: 195, y: 449, s: 1.85 },  glow: 'rgba(74,222,128,.26)' },
     { k: 'cb',      scroll: 0,   zoom: { x: 195, y: 214, s: 1.75 },  glow: 'rgba(192,132,252,.30)' },
     { k: 'cockpit', scroll: 300, zoom: { x: 195, y: 499, s: 1.55 },  glow: 'rgba(255,107,107,.26)' },
-    { k: 'e6b',     scroll: 0,   zoom: { x: 194, y: 336, s: 1.45 },  glow: 'rgba(245,181,71,.24)', wheel: { x: 194, y: 282, r: 176 } },
+    { k: 'e6b',     scroll: 0,   zoom: { x: 194, y: 336, s: 1.45 },  glow: 'rgba(245,181,71,.24)', wheel: { x: 194, y: 282, r: 160 } },
     { k: 'logbook', scroll: 0,   zoom: { x: 195, y: 294, s: 1.75 },  glow: 'rgba(100,181,255,.32)' }
   ];
   var PW = 418, PH = 872, BZ = 14;
