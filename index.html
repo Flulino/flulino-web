@@ -2,59 +2,162 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Flulino · VFR-Flugvorbereitung</title>
-  <meta name="description" content="Flulino ist eine kostenlose iPhone-App für die VFR-Flugvorbereitung. Von Piloten für Piloten.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Flulino · VFR-Flugvorbereitung für das iPhone</title>
+  <meta name="description" content="Flulino ist eine kostenlose iPhone-App für die VFR-Flugvorbereitung: Flugwetter, Masse & Schwerpunkt, Wolkenkunde, Cockpit-Karte, E6B und Flugbuch. Von Piloten für Piloten.">
   <meta name="theme-color" content="#050E1A">
   <link rel="icon" href="favicon.png">
   <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="./"><img src="logo.png" alt="">Flulino</a>
-      <div class="links"><a href="#support">Support</a><a href="datenschutz.html">Datenschutz</a></div>
-    </nav>
+<body class="home">
+  <header class="topnav">
+    <a class="brand" href="./"><img src="logo.png" alt="">Flulino</a>
+    <div class="links"><a href="#funktionen">Funktionen</a><a href="#support">Support</a><a href="datenschutz.html">Datenschutz</a></div>
+  </header>
 
-    <header class="hero">
-      <img src="logo.png" alt="Flulino Logo">
-      <h1>Flulino</h1>
-      <p class="lead">Deine VFR-Flugvorbereitung auf dem iPhone. Übersichtlich, auf Deutsch und für immer kostenlos.</p>
-      <div class="kicker">VON PILOTEN FÜR PILOTEN</div>
-      <div class="pills"><span class="pill">Kostenlos</span><span class="pill">Keine Werbung</span><span class="pill">Kein Konto</span><span class="pill">Bald im App Store</span></div>
-    </header>
+  <!-- ================= Scroll-Geschichte mit iPhone ================= -->
+  <section class="story" id="story">
+    <div class="stage">
+      <div class="glow"></div>
 
-    <h2>Was Flulino kann</h2>
-    <div class="grid">
-      <div class="feature"><div class="ico">📝</div><b>Flugplan</b><span>Flugdurchführungsplan ausfüllen und als PDF teilen.</span></div>
-      <div class="feature"><div class="ico">🗺️</div><b>Strecke & Karte</b><span>Start, Ziel und Zwischenstationen, mit Lufträumen auf der Karte.</span></div>
-      <div class="feature"><div class="ico">☁️</div><b>Flugwetter</b><span>METAR und TAF auf Deutsch, Wetter entlang der Strecke, Briefing als PDF.</span></div>
-      <div class="feature"><div class="ico">⚠️</div><b>NOTAMs</b><span>Dein DFS-Briefing übernehmen, sortiert und auf Deutsch aufbereitet.</span></div>
-      <div class="feature"><div class="ico">📘</div><b>Flugbuch</b><span>Flüge eintragen, Flugzeit wird automatisch summiert.</span></div>
-      <div class="feature"><div class="ico">🩺</div><b>Medical</b><span>Gültigkeit im Blick, mit Erinnerung vor dem Ablauf.</span></div>
+      <div class="hero-text">
+        <img class="hero-logo" src="logo.png" alt="Flulino Logo">
+        <div class="eyebrow">VON PILOTEN FÜR PILOTEN</div>
+        <h1>Flugvorbereitung.<br><span class="grad">Endlich entspannt.</span></h1>
+        <p>Wetter, Beladung, Funk und Flugbuch. Alles für deinen VFR-Flug in einer App. Auf Deutsch und für immer kostenlos.</p>
+        <div class="scroll-hint"><span></span>Scrollen</div>
+      </div>
+
+      <div class="chapters">
+        <article class="chap" data-i="0">
+          <div class="eyebrow">Flulino</div>
+          <h2>Alles für deinen Flug. In einer App.</h2>
+          <p>Vom ersten Blick aufs Wetter bis zum Eintrag ins Flugbuch. Übersichtlich, ohne Konto und ohne Werbung.</p>
+        </article>
+        <article class="chap" data-i="1">
+          <div class="eyebrow" style="--c:#64B5FF">Flugwetter</div>
+          <h2>Das Wetter, wie Piloten es brauchen.</h2>
+          <p>Das Höhenprofil zeigt Wolken, Wind in jeder Höhe, Nullgradgrenze und Gewitterrisiko auf einen Blick. METAR und TAF gibt es in Klartext.</p>
+        </article>
+        <article class="chap" data-i="2">
+          <div class="eyebrow" style="--c:#4ADE80">Masse &amp; Schwerpunkt</div>
+          <h2>Beladen. Rechnen. Sicher sein.</h2>
+          <p>Dein Flugzeug mit den Werten aus Flughandbuch und Wägebericht. Start und Landung liegen im Diagramm, und Flulino sagt dir in Klartext, ob alles passt.</p>
+        </article>
+        <article class="chap" data-i="3">
+          <div class="eyebrow" style="--c:#C084FC">Wolkenkunde</div>
+          <h2>Jede Wolke verstehen.</h2>
+          <p>Alle Wolkengattungen mit selbst gezeichneten Bildern, typischen Höhen, Risiken für VFR und einem Merksatz, der hängen bleibt.</p>
+        </article>
+        <article class="chap" data-i="4">
+          <div class="eyebrow" style="--c:#FF6B6B">Cockpit-Karte</div>
+          <h2>Dein Rufzeichen. Fertige Funksprüche.</h2>
+          <p>Notfrequenz, Squawks, Lichtsignale, Halbkreisflughöhen und GAFOR. Die Funksprüche sind schon mit deinem Kennzeichen ausgefüllt.</p>
+        </article>
+        <article class="chap" data-i="5">
+          <div class="eyebrow" style="--c:#F5B547">E6B Flugrechner</div>
+          <h2>Der Klassiker. Zum Drehen.</h2>
+          <p>Windseite und Rechenscheibe wie aus Metall, nur auf dem iPhone. Drehen, schieben und exakt ablesen, mit Lösungsweg Schritt für Schritt.</p>
+        </article>
+        <article class="chap" data-i="6">
+          <div class="eyebrow" style="--c:#64B5FF">Flugbuch</div>
+          <h2>Jede Minute in der Luft.</h2>
+          <p>Flüge eintragen, Flugzeit und Landungen werden automatisch summiert. Mit Übertrag aus dem Papier-Flugbuch und Export als PDF.</p>
+        </article>
+      </div>
+
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="phone">
+          <div class="screen">
+            <div class="scr" data-k="home"><img src="shot-home.webp" alt="" decoding="async"><div class="tabbar" data-active="0"></div></div>
+            <div class="scr" data-k="wx"><img src="shot-wx.webp" alt="" decoding="async"></div>
+            <div class="scr" data-k="mb"><img src="shot-mb.webp" alt="" decoding="async"></div>
+            <div class="scr" data-k="cb"><img src="shot-cb.webp" alt="" decoding="async"></div>
+            <div class="scr" data-k="cockpit"><img src="shot-cockpit.webp" alt="" decoding="async"></div>
+            <div class="scr" data-k="e6b"><img src="shot-e6b.webp" alt="" decoding="async"><div class="wheel"></div></div>
+            <div class="scr" data-k="logbook"><img src="shot-logbook.webp" alt="" decoding="async"></div>
+            <div class="status"><span class="time">9:41</span><span class="icons">
+              <svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#fff"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#fff"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#fff"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#fff"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12"><path d="M8 11.5 5.6 9a3.4 3.4 0 0 1 4.8 0L8 11.5Zm-4.3-4.3L2 5.5a8.5 8.5 0 0 1 12 0l-1.7 1.7a6 6 0 0 0-8.6 0ZM0 3.5 0 3.5A11.3 11.3 0 0 1 16 3.5l-1.6 1.6a9 9 0 0 0-12.8 0L0 3.5Z" fill="#fff"/></svg>
+              <svg width="27" height="13" viewBox="0 0 27 13"><rect x="0.5" y="0.5" width="22" height="12" rx="3.5" fill="none" stroke="#fff" opacity=".45"/><rect x="2" y="2" width="17" height="9" rx="2" fill="#fff"/><rect x="24" y="4.5" width="2" height="4" rx="1" fill="#fff" opacity=".45"/></svg>
+            </span></div>
+            <div class="island"></div>
+            <div class="homebar"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     </div>
+  </section>
+
+  <!-- ================= Aussage, Wort für Wort ================= -->
+  <section class="statement" id="statement">
+    <div class="statement-stage">
+      <p class="words">Kostenlos. Für immer. Keine Werbung, kein Abo, kein Konto. Deine Daten bleiben auf deinem iPhone. Gebaut von einem Piloten, für alle, die gern fliegen.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <h2 class="sec" id="funktionen">Alles an Bord</h2>
+    <div class="grid feat">
+      <div class="feature"><div class="ico">☁️</div><b>Flugwetter</b><span>Höhenprofil, Meteogramm, METAR und TAF auf Deutsch, VFR-Lagekarte mit GAFOR.</span></div>
+      <div class="feature"><div class="ico">🛩️</div><b>Streckenwetter</b><span>Wind je Abschnitt, Flugzeit und die günstigste Höhe für deine Strecke.</span></div>
+      <div class="feature"><div class="ico">🗺️</div><b>Luftfahrtkarte</b><span>Apple- oder BKG-Karte mit Lufträumen, Flugplätzen und deiner Strecke.</span></div>
+      <div class="feature"><div class="ico">⚖️</div><b>Masse &amp; Schwerpunkt</b><span>Deine Flugzeuge, Beladung und Schwerpunktdiagramm für Start und Landung.</span></div>
+      <div class="feature"><div class="ico">📻</div><b>Cockpit-Karte</b><span>Funksprüche mit deinem Rufzeichen, Notfall, Lichtsignale, Flughöhen, GAFOR.</span></div>
+      <div class="feature"><div class="ico">⛅</div><b>Wolkenkunde</b><span>Jede Wolke mit Bild, typischer Höhe und Risiken für den Sichtflug.</span></div>
+      <div class="feature"><div class="ico">🧭</div><b>E6B Flugrechner</b><span>Windseite und Rechenscheibe zum Drehen, mit Lösungsweg.</span></div>
+      <div class="feature"><div class="ico">⚠️</div><b>NOTAMs</b><span>Dein DFS-Briefing übernehmen, sortiert und auf Deutsch aufbereitet.</span></div>
+      <div class="feature"><div class="ico">🌧️</div><b>Regenradar &amp; SIGMET</b><span>Radar mit Vorhersage und Warnungen für Gewitter, Vereisung und Turbulenz.</span></div>
+      <div class="feature"><div class="ico">📝</div><b>Flugplan</b><span>Flugdurchführungsplan ausfüllen und als PDF teilen.</span></div>
+      <div class="feature"><div class="ico">📘</div><b>Flugbuch</b><span>Flüge eintragen, Zeiten und Landungen automatisch summiert, PDF-Export.</span></div>
+      <div class="feature"><div class="ico">🩺</div><b>Medical</b><span>Gültigkeit im Blick, mit Erinnerung vor dem Ablauf.</span></div>
+      <div class="feature"><div class="ico">☀️</div><b>UV-Belastung</b><span>UV-Index am Boden und in Flughöhe, damit du dich richtig schützt.</span></div>
+      <div class="feature"><div class="ico">📄</div><b>Wetterbriefing</b><span>Dein Briefing als PDF, gespeichert und auch ohne Internet abrufbar.</span></div>
+      <div class="feature"><div class="ico">🔁</div><b>Umrechner</b><span>NM, km, Gallonen, Liter, Fuß, Meter und mehr. Knoten oder km/h nach Wahl.</span></div>
+    </div>
+  </div>
+
+  <!-- ================= Galerie ================= -->
+  <section class="gallery" aria-label="Bildschirme aus der App">
+    <div class="track">
+      <div class="mini"><img src="shot-home.webp" alt="Startseite" loading="lazy"></div>
+      <div class="mini"><img src="shot-wx.webp" alt="Höhenprofil" loading="lazy"></div>
+      <div class="mini"><img src="shot-mb.webp" alt="Masse und Schwerpunkt" loading="lazy"></div>
+      <div class="mini"><img src="shot-clouds.webp" alt="Wolkenkunde" loading="lazy"></div>
+      <div class="mini"><img src="shot-cb.webp" alt="Gewitterwolke" loading="lazy"></div>
+      <div class="mini"><img src="shot-cockpit.webp" alt="Cockpit-Karte" loading="lazy"></div>
+      <div class="mini"><img src="shot-e6b.webp" alt="E6B" loading="lazy"></div>
+      <div class="mini"><img src="shot-logbook.webp" alt="Flugbuch" loading="lazy"></div>
+    </div>
+  </section>
+
+  <div class="wrap">
     <div class="notice"><span>🧭</span><span>Flulino ist <b>kein Navigationsgerät</b> und dient nur der Vorbereitung am Boden. Maßgeblich sind immer die amtlichen Unterlagen (AIP, NOTAM, Flugwetter).</span></div>
 
-    <h2 id="support">Support</h2>
+    <h2 class="sec" id="support">Support</h2>
     <div class="contact">
       <div class="ico">✉️</div>
       <div>
         <b>Fragen, Fehler oder Ideen?</b>
-        Schreib uns gern. Mit Bildschirmfoto und kurzer Beschreibung können wir Fehler am schnellsten beheben.<br>
+        Schreib uns gern, am einfachsten direkt in der App unter Mehr → Kontakt. Mit Bildschirmfoto und kurzer Beschreibung können wir Fehler am schnellsten beheben.<br>
         <a class="btn" href="mailto:flulino@icloud.com?subject=Flulino%20Support">flulino@icloud.com</a>
       </div>
     </div>
 
-    <h2>Häufige Fragen</h2>
+    <h2 class="sec">Häufige Fragen</h2>
     <details><summary>Ist Flulino wirklich kostenlos?</summary><p>Ja. Kein Abo, keine Werbung, alle Funktionen für alle. Wer möchte, kann das Projekt freiwillig mit einer kleinen Spende im App Store unterstützen. Dadurch wird nichts freigeschaltet.</p></details>
     <details><summary>Brauche ich ein Konto?</summary><p>Nein. Beim ersten Start gibst du nur deinen Namen ein. Alle Daten bleiben auf deinem iPhone.</p></details>
     <details><summary>Wie nehme ich meine Daten auf ein neues iPhone mit?</summary><p>In Flulino unter <b>Mehr → Daten exportieren</b> eine Sicherung erstellen, z. B. in iCloud Drive oder per AirDrop. Auf dem neuen iPhone beim ersten Start „Sicherung einspielen“ wählen. Deine Daten sind außerdem Teil deines normalen iPhone-Backups.</p></details>
+    <details><summary>Liefert Flulino Werte für mein Flugzeug mit?</summary><p>Nein, bewusst nicht. Jedes Flugzeug wird einzeln gewogen. Leermasse, Hebelarme und Grenzen trägst du selbst aus Flughandbuch und Wägebericht ein. Nur so stimmt die Rechnung für genau dein Flugzeug.</p></details>
     <details><summary>Woher kommen die NOTAMs?</summary><p>Du erstellst dein NOTAM-Briefing wie gewohnt im AIS-Portal der DFS, direkt in der App und mit deinem eigenen DFS-Zugang. Mit einem Tipp übernimmt Flulino das Briefing und bereitet es auf Deutsch auf. Maßgeblich bleibt immer der Originaltext.</p></details>
-    <details><summary>Woher kommen Wetter und Karten?</summary><p>Aus frei verfügbaren Quellen: Deutscher Wetterdienst, Open-Meteo, NOAA Aviation Weather Center, Bundesamt für Kartographie und Geodäsie, open flightmaps (Lufträume) und OurAirports. Die Anflugkarten öffnet Flulino direkt im AIP VFR der DFS.</p></details>
-    <details><summary>Ich habe einen Fehler gefunden.</summary><p>Danke! Schick uns eine Mail an <a href="mailto:flulino@icloud.com">flulino@icloud.com</a>, am besten mit Bildschirmfoto und der Versionsnummer (in der App unter Mehr → Über Flulino).</p></details>
+    <details><summary>Woher kommen Wetter und Karten?</summary><p>Aus frei verfügbaren Quellen: Deutscher Wetterdienst, Open-Meteo, NOAA Aviation Weather Center, Bundesamt für Kartographie und Geodäsie, Apple Karten, open flightmaps (Lufträume) und OurAirports. Die Anflugkarten öffnet Flulino direkt im AIP VFR der DFS.</p></details>
+    <details><summary>Ich habe einen Fehler gefunden.</summary><p>Danke! Schick uns eine Nachricht über Mehr → Kontakt in der App oder eine Mail an <a href="mailto:flulino@icloud.com">flulino@icloud.com</a>, am besten mit Bildschirmfoto und der Versionsnummer (Mehr → Über Flulino).</p></details>
 
-    <h2>Haftungsausschluss</h2>
+    <h2 class="sec">Haftungsausschluss</h2>
     <div class="card">
       <p>Alle in Flulino angezeigten Daten dienen der allgemeinen Information und können unvollständig, veraltet oder falsch sein. Die Nutzung von Flulino befreit nicht von der Pflicht zur ordnungsgemäßen Flugvorbereitung mit offiziell zugelassenen Mitteln. Die Verantwortung liegt immer beim verantwortlichen Luftfahrzeugführer.</p>
       <p>Die App wird ohne Gewährleistung bereitgestellt. Eine Haftung für Schäden, die durch die Nutzung entstehen, ist, soweit gesetzlich zulässig, ausgeschlossen.</p>
@@ -62,9 +165,11 @@
 
     <footer>
       <div class="links"><a href="#support">Support</a><a href="datenschutz.html">Datenschutz</a><a href="mailto:flulino@icloud.com">Kontakt</a></div>
-      © Flulino
+      © Flulino · Bildschirmfotos mit Beispieldaten
       <div class="tag">FLULINO · VON PILOTEN FÜR PILOTEN</div>
     </footer>
   </div>
+
+  <script src="home.js"></script>
 </body>
 </html>
