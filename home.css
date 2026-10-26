@@ -6,7 +6,7 @@ html { scroll-behavior: smooth; }
   position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between;
   padding: 12px max(20px, calc((100vw - 1100px) / 2)); background: rgba(5, 14, 26, .55);
   -webkit-backdrop-filter: saturate(160%) blur(18px); backdrop-filter: saturate(160%) blur(18px);
-  border-bottom: 1px solid rgba(100, 181, 255, .08);
+  border-bottom: 1px solid rgba(100, 181, 255, .08); gap: 12px;
 }
 .topnav .brand { display: flex; align-items: center; gap: 9px; color: var(--text); font-weight: 800; font-size: 17px; letter-spacing: -.3px; }
 .topnav .brand img { width: 28px; height: 28px; }
@@ -102,7 +102,7 @@ h2.sec { color: var(--faint); font-size: 13px; letter-spacing: 1.8px; text-trans
 .feature.reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s, transform .6s; }
 .feature.reveal.in { opacity: 1; transform: none; }
 @media (max-width: 860px) { .grid.feat { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px) { .grid.feat { grid-template-columns: 1fr; } .topnav .links { gap: 14px; font-size: 13.5px; } .topnav .links a:first-child { display: none; } }
+@media (max-width: 560px) { .grid.feat { grid-template-columns: 1fr; } .topnav .links { gap: 13px; font-size: 13.5px; } .topnav { padding-left: 16px; padding-right: 16px; } }
 
 /* ---------- Galerie ---------- */
 .gallery { margin: 70px 0 20px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -111,6 +111,9 @@ h2.sec { color: var(--faint); font-size: 13px; letter-spacing: 1.8px; text-trans
 .mini { width: 196px; height: 410px; border-radius: 34px; padding: 7px; flex-shrink: 0; background: linear-gradient(150deg, #4a5663, #0c1015 50%, #59656f); box-shadow: 0 20px 50px -10px rgba(0,0,0,.7); }
 .mini img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 28px; display: block; background: #050E1A; }
 @keyframes marquee { to { transform: translateX(calc(-50% - 11px)); } }
+
+@media (max-width: 340px) { .topnav .brand { font-size: 0 !important; } }
+@media (max-width: 380px) { .topnav .links { gap: 10px; font-size: 12.5px; } .topnav .brand { font-size: 15px; gap: 7px; } .topnav .brand img { width: 24px; height: 24px; } }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
